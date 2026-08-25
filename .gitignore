@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Secrets
+*.pem
+
+# Local data
+data/*.csv
+
+# IDE
+.vscode/
