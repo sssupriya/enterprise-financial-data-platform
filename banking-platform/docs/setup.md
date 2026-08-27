@@ -18,6 +18,7 @@ py --version
 py -m pip --version
 py -m pip install faker pandas sqlalchemy psycopg2-binary
 
+
 # My first ETL pipeline:
 customers.csv
      ↓
@@ -44,3 +45,53 @@ SELECT COUNT(*)
     SELECT *
     FROM raw.customers
     LIMIT 10;
+
+
+### 27-08-2026 I ran those commands for actual Syenthetic banking data designing
+py -m pip install faker pandas pyyaml pytest sqlalchemy psycopg2-binary
+py  generators/master_data.py   
+py -c "from faker import Faker; print('Faker is working')"
+py -c "import pandas as pd; print(pd.read_csv('data/customers.csv').shape); print(pd.read_csv('data/branches.csv').shape); print(pd.read_csv('data/merchants.csv').shape)"
+
+banking-platform/
+│
+├── data/
+│   ├── customers.csv       ✅ 5,000
+│   ├── branches.csv        ✅ 50
+│   └── merchants.csv       ✅ 300
+│
+├── docs/
+│   └── design/
+│       └── master-data.md  ✅
+│
+├── generators/
+│   └── master_data.py      ✅
+│
+├── config/
+├── tests/
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+
+## Master Data part is working:
+
+✅ master-data.md
+✅ master_data.py
+✅ generator_config.yaml
+✅ Faker
+✅ PyYAML
+✅ 5,000 customers
+✅ 50 branches
+✅ 300 merchants
+✅ Seed = 42
+
+
+## Accounts:
+5,000 customers
+       ↓
+   7,000 accounts
+       ↓
+customer_id links accounts to customers
+       ↓
+branch_code links accounts to branches

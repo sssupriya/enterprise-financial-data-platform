@@ -1,0 +1,37 @@
+seed: 42
+
+master_data:
+  customers: 5000
+  branches: 50
+  merchants: 300
+
+  cities:
+    - Bangalore
+    - Mumbai
+    - Pune
+    - Hyderabad
+    - Chennai
+    - Delhi
+    - Kolkata
+    - Ahmedabad
+
+  customer_segments:
+    - salaried
+    - self-employed
+    - student
+    - senior
+
+  kyc_status:
+    - verified
+    - pending
+    - rejected
+
+  merchant_categories:
+    - grocery
+    - fuel
+    - dining
+    - utilities
+    - jewellery
+    - pharmacy
+    - travel
+    - shopping

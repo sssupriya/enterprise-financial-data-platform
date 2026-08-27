@@ -1,0 +1,301 @@
+merchant_id,merchant_name,category,city
+M000001,Villarreal and Sons,jewellery,Bangalore
+M000002,Sanchez Inc,travel,Pune
+M000003,Ramirez-Reynolds,grocery,Pune
+M000004,James-Brown,shopping,Mumbai
+M000005,"Carr, Knight and Morrow",dining,Mumbai
+M000006,Merritt LLC,dining,Mumbai
+M000007,Taylor Inc,fuel,Chennai
+M000008,Gross Group,utilities,Hyderabad
+M000009,Garrison-Lin,travel,Kolkata
+M000010,"Mann, Myers and Rivera",shopping,Ahmedabad
+M000011,Burton-Franco,grocery,Kolkata
+M000012,Peters Group,utilities,Ahmedabad
+M000013,Livingston PLC,dining,Mumbai
+M000014,Blackburn LLC,shopping,Kolkata
+M000015,"Ward, Evans and Green",utilities,Ahmedabad
+M000016,Sanders-Walker,dining,Mumbai
+M000017,Walker PLC,shopping,Pune
+M000018,"Watson, Dyer and Phillips",grocery,Kolkata
+M000019,Lee Group,pharmacy,Ahmedabad
+M000020,Cantu Ltd,travel,Ahmedabad
+M000021,Johnson and Sons,utilities,Delhi
+M000022,Collins LLC,jewellery,Hyderabad
+M000023,Baker and Sons,fuel,Hyderabad
+M000024,"Rodriguez, Turner and Alvarado",travel,Mumbai
+M000025,"Riley, Gordon and Steele",jewellery,Delhi
+M000026,"Foster, Underwood and Guerra",grocery,Hyderabad
+M000027,Arnold Ltd,dining,Delhi
+M000028,Page-Prince,fuel,Hyderabad
+M000029,"Dalton, James and Aguilar",grocery,Pune
+M000030,Hernandez Ltd,fuel,Pune
+M000031,Lucas Group,pharmacy,Mumbai
+M000032,Small-Brown,pharmacy,Bangalore
+M000033,Lopez-Johnson,travel,Ahmedabad
+M000034,Skinner Inc,jewellery,Chennai
+M000035,Perez LLC,jewellery,Ahmedabad
+M000036,Martin PLC,grocery,Ahmedabad
+M000037,"Blackburn, Henderson and Morgan",grocery,Bangalore
+M000038,Walton-Blair,travel,Pune
+M000039,Gonzalez and Sons,travel,Ahmedabad
+M000040,"Mcknight, Hanson and Hall",jewellery,Chennai
+M000041,Smith LLC,shopping,Kolkata
+M000042,Berry-Rodriguez,jewellery,Kolkata
+M000043,Rich and Sons,shopping,Ahmedabad
+M000044,Robinson LLC,fuel,Chennai
+M000045,Mcdonald-Jones,utilities,Kolkata
+M000046,"Martinez, Santana and Logan",pharmacy,Kolkata
+M000047,Cantu-Smith,grocery,Kolkata
+M000048,Thomas-Mendoza,pharmacy,Chennai
+M000049,"Reed, Cervantes and Wright",grocery,Bangalore
+M000050,"Brown, Ramirez and Wood",utilities,Kolkata
+M000051,Miller and Sons,pharmacy,Delhi
+M000052,Navarro PLC,shopping,Hyderabad
+M000053,Cabrera-Jackson,grocery,Hyderabad
+M000054,Robinson Ltd,jewellery,Kolkata
+M000055,Williams PLC,dining,Kolkata
+M000056,Ellis-Potts,shopping,Ahmedabad
+M000057,"Pacheco, Robles and Lowery",fuel,Mumbai
+M000058,Davis Ltd,dining,Delhi
+M000059,Rosario Ltd,utilities,Kolkata
+M000060,Carter LLC,utilities,Delhi
+M000061,Gonzales Ltd,pharmacy,Bangalore
+M000062,Hendricks-Green,grocery,Ahmedabad
+M000063,"Ford, Parsons and Garcia",pharmacy,Pune
+M000064,May-Vazquez,fuel,Delhi
+M000065,Summers-Gutierrez,dining,Pune
+M000066,"Buchanan, Burke and Atkins",travel,Ahmedabad
+M000067,Williams-Ward,travel,Hyderabad
+M000068,"Perez, Brennan and Alexander",utilities,Chennai
+M000069,"Harrison, Hernandez and Wagner",pharmacy,Mumbai
+M000070,White LLC,pharmacy,Chennai
+M000071,"Williams, Sosa and Casey",pharmacy,Kolkata
+M000072,Cruz-Chang,travel,Chennai
+M000073,Marquez-Melendez,utilities,Kolkata
+M000074,"Stevenson, Valentine and Washington",pharmacy,Chennai
+M000075,"Lopez, Berry and Shepard",jewellery,Chennai
+M000076,Garcia Inc,jewellery,Hyderabad
+M000077,Krause Inc,fuel,Chennai
+M000078,"Ellis, Palmer and Young",fuel,Chennai
+M000079,Haas-Tran,utilities,Kolkata
+M000080,"Mendez, Caldwell and Macdonald",jewellery,Hyderabad
+M000081,Gibson Inc,shopping,Chennai
+M000082,Carter-Johnson,utilities,Chennai
+M000083,"Cantu, George and Gomez",travel,Chennai
+M000084,"Bonilla, Williamson and Benson",grocery,Chennai
+M000085,George Ltd,dining,Pune
+M000086,Snyder and Sons,grocery,Hyderabad
+M000087,Thomas Group,travel,Delhi
+M000088,Goodman-Wright,shopping,Pune
+M000089,"Gibson, Martin and Ward",jewellery,Hyderabad
+M000090,Hernandez-Rodriguez,utilities,Mumbai
+M000091,Bennett LLC,fuel,Pune
+M000092,"Cochran, Garza and Lucas",shopping,Bangalore
+M000093,Stout Ltd,grocery,Pune
+M000094,"Smith, Ryan and Gonzalez",fuel,Pune
+M000095,Phillips-Ramos,grocery,Ahmedabad
+M000096,Torres PLC,pharmacy,Ahmedabad
+M000097,Romero-Carpenter,pharmacy,Chennai
+M000098,Smith-Marshall,jewellery,Hyderabad
+M000099,Smith LLC,pharmacy,Kolkata
+M000100,"Vega, Cannon and Cohen",shopping,Delhi
+M000101,Salazar LLC,dining,Pune
+M000102,French Group,utilities,Bangalore
+M000103,Scott-Miles,grocery,Bangalore
+M000104,Sanders Ltd,jewellery,Chennai
+M000105,"Clark, Meza and Harper",jewellery,Kolkata
+M000106,Gutierrez-Adams,fuel,Kolkata
+M000107,Morse-Wells,utilities,Pune
+M000108,Moore LLC,grocery,Bangalore
+M000109,"Hernandez, Barnes and Blackwell",pharmacy,Pune
+M000110,Daniels-Thomas,dining,Mumbai
+M000111,"Anderson, Valdez and Armstrong",utilities,Mumbai
+M000112,Hernandez LLC,pharmacy,Ahmedabad
+M000113,Jones Group,pharmacy,Kolkata
+M000114,Williams PLC,utilities,Kolkata
+M000115,Stewart-Ortega,pharmacy,Delhi
+M000116,"Morales, Graham and Ford",grocery,Ahmedabad
+M000117,"Burnett, Brewer and Jackson",fuel,Kolkata
+M000118,"Sharp, Beck and Finley",fuel,Hyderabad
+M000119,Reynolds Inc,pharmacy,Chennai
+M000120,Alvarado-Hanson,utilities,Chennai
+M000121,Lucas PLC,pharmacy,Chennai
+M000122,Davis-Harris,travel,Kolkata
+M000123,Walker PLC,fuel,Hyderabad
+M000124,Williams PLC,utilities,Mumbai
+M000125,"York, Walker and Foley",grocery,Delhi
+M000126,Fuentes Inc,jewellery,Hyderabad
+M000127,Jefferson Inc,utilities,Pune
+M000128,Casey LLC,dining,Kolkata
+M000129,"Phillips, Bates and Stephenson",grocery,Pune
+M000130,"Watson, Hernandez and Graham",utilities,Hyderabad
+M000131,Nichols-Esparza,shopping,Chennai
+M000132,English-Garcia,dining,Chennai
+M000133,"Rodriguez, Murphy and Hawkins",travel,Chennai
+M000134,Price LLC,fuel,Hyderabad
+M000135,Hood Ltd,jewellery,Bangalore
+M000136,Williams Group,shopping,Hyderabad
+M000137,Hudson PLC,travel,Kolkata
+M000138,Ramos-Warren,grocery,Bangalore
+M000139,Decker PLC,dining,Delhi
+M000140,Parsons-Moyer,travel,Chennai
+M000141,"Morales, Bautista and Ross",dining,Bangalore
+M000142,Hampton-Wilson,shopping,Mumbai
+M000143,Ramsey-Robinson,jewellery,Ahmedabad
+M000144,"White, Bishop and Espinoza",shopping,Mumbai
+M000145,Stokes-White,utilities,Chennai
+M000146,White LLC,jewellery,Bangalore
+M000147,"Brown, Mitchell and Carr",pharmacy,Hyderabad
+M000148,"Robinson, Kaufman and Campbell",dining,Bangalore
+M000149,Pace-Stark,pharmacy,Hyderabad
+M000150,"Barton, Graves and Rodriguez",dining,Bangalore
+M000151,Huffman-Griffin,jewellery,Pune
+M000152,Chapman-Wheeler,travel,Kolkata
+M000153,"Ramirez, Vazquez and Davis",dining,Delhi
+M000154,Palmer and Sons,pharmacy,Ahmedabad
+M000155,Moss Inc,utilities,Pune
+M000156,Robinson Group,dining,Hyderabad
+M000157,Ortiz-Mclaughlin,utilities,Pune
+M000158,"Jackson, Smith and Smith",dining,Bangalore
+M000159,Adkins PLC,dining,Bangalore
+M000160,Lee-Foster,travel,Delhi
+M000161,Smith Ltd,utilities,Mumbai
+M000162,Nguyen and Sons,grocery,Hyderabad
+M000163,Sanchez-Moreno,grocery,Hyderabad
+M000164,Pierce Inc,utilities,Hyderabad
+M000165,Tran-Martin,travel,Chennai
+M000166,Kirby-Gilbert,shopping,Ahmedabad
+M000167,"Osborne, Saunders and Brown",fuel,Mumbai
+M000168,Sanders-Terry,shopping,Kolkata
+M000169,Carson Group,grocery,Delhi
+M000170,Hodge and Sons,travel,Ahmedabad
+M000171,"Haney, Clark and Wiggins",shopping,Pune
+M000172,"Orozco, Nunez and Andrade",pharmacy,Delhi
+M000173,Lewis Group,grocery,Hyderabad
+M000174,Mccullough-Miller,jewellery,Pune
+M000175,Reid-Ware,utilities,Delhi
+M000176,"Gentry, Brady and Tate",fuel,Bangalore
+M000177,Sanders Inc,utilities,Pune
+M000178,Hamilton LLC,shopping,Chennai
+M000179,Smith Inc,utilities,Pune
+M000180,Moore PLC,utilities,Bangalore
+M000181,Harris and Sons,dining,Chennai
+M000182,"Lynch, Garcia and Fernandez",dining,Bangalore
+M000183,"Simon, Walker and Hurst",shopping,Chennai
+M000184,Mclaughlin-Chandler,grocery,Mumbai
+M000185,Rice LLC,shopping,Mumbai
+M000186,"Pace, Doyle and Graves",dining,Pune
+M000187,Cisneros-Olson,jewellery,Pune
+M000188,Davis-Williams,pharmacy,Bangalore
+M000189,"Cummings, Petersen and Jackson",shopping,Bangalore
+M000190,"Nolan, Medina and Garcia",jewellery,Kolkata
+M000191,"Li, Wright and Jones",fuel,Ahmedabad
+M000192,Mcdonald Group,shopping,Ahmedabad
+M000193,Wilson-Hull,jewellery,Delhi
+M000194,"Rodriguez, Booker and Barnes",fuel,Kolkata
+M000195,"Day, Weaver and Evans",jewellery,Pune
+M000196,"Jimenez, Navarro and Smith",travel,Bangalore
+M000197,"Short, Hernandez and Myers",utilities,Delhi
+M000198,Dominguez-Short,dining,Ahmedabad
+M000199,"Cruz, Jackson and Kane",dining,Ahmedabad
+M000200,"Gallegos, Taylor and West",fuel,Delhi
+M000201,Jensen-Watkins,dining,Pune
+M000202,Cooper and Sons,grocery,Delhi
+M000203,"Nelson, Graham and Fields",travel,Delhi
+M000204,Rojas-Tanner,jewellery,Kolkata
+M000205,"Hensley, Johnson and Adams",dining,Chennai
+M000206,Thomas-Williamson,shopping,Hyderabad
+M000207,Garza-Shea,utilities,Hyderabad
+M000208,Duran PLC,fuel,Ahmedabad
+M000209,"Sanders, Smith and Smith",fuel,Pune
+M000210,"Ellis, Parks and Jimenez",fuel,Pune
+M000211,"Bell, Williamson and Duncan",grocery,Mumbai
+M000212,Hill-Mckay,shopping,Mumbai
+M000213,Lang PLC,utilities,Bangalore
+M000214,Rodriguez-Murray,travel,Delhi
+M000215,Combs-Stone,fuel,Bangalore
+M000216,"Cooper, Ross and Perkins",grocery,Ahmedabad
+M000217,"Rodriguez, James and Frank",jewellery,Ahmedabad
+M000218,"Johnson, Roberts and Smith",utilities,Bangalore
+M000219,"Jackson, Bowman and Drake",pharmacy,Pune
+M000220,Murphy and Sons,jewellery,Mumbai
+M000221,Houston Inc,dining,Delhi
+M000222,Ross Group,fuel,Delhi
+M000223,Sanders LLC,fuel,Ahmedabad
+M000224,"Guzman, Brown and Larsen",dining,Pune
+M000225,Nelson LLC,shopping,Pune
+M000226,Meyer-Carrillo,jewellery,Kolkata
+M000227,Hawkins PLC,utilities,Hyderabad
+M000228,"Peters, Golden and Ballard",dining,Ahmedabad
+M000229,Olson-Estrada,grocery,Pune
+M000230,"Arnold, Montgomery and Doyle",jewellery,Delhi
+M000231,Whitaker-Paul,dining,Pune
+M000232,Tran Group,travel,Mumbai
+M000233,Smith Group,travel,Pune
+M000234,Herman-Williams,jewellery,Delhi
+M000235,Williams LLC,utilities,Kolkata
+M000236,"Myers, Shelton and Garcia",grocery,Hyderabad
+M000237,"Kelly, Harris and Pruitt",utilities,Hyderabad
+M000238,Hughes-Davis,jewellery,Chennai
+M000239,Saunders-Lee,shopping,Chennai
+M000240,Irwin-Ortega,jewellery,Bangalore
+M000241,Reynolds-Hudson,pharmacy,Ahmedabad
+M000242,"Juarez, Sloan and Gaines",jewellery,Bangalore
+M000243,"Wilson, Kennedy and Perry",grocery,Ahmedabad
+M000244,"Lara, Johnson and Welch",grocery,Pune
+M000245,Patterson Ltd,travel,Delhi
+M000246,Williams LLC,fuel,Delhi
+M000247,Turner-Novak,utilities,Delhi
+M000248,Guzman Inc,shopping,Ahmedabad
+M000249,Webb-Ortega,dining,Chennai
+M000250,Hansen-Hickman,travel,Kolkata
+M000251,Martin-Case,dining,Hyderabad
+M000252,Thomas-Strickland,travel,Delhi
+M000253,Morris LLC,jewellery,Hyderabad
+M000254,"Harper, Brennan and Taylor",shopping,Pune
+M000255,Tate-Lopez,shopping,Ahmedabad
+M000256,Martinez Inc,dining,Delhi
+M000257,Young-Frederick,pharmacy,Pune
+M000258,"Keller, Gonzales and Johnson",grocery,Pune
+M000259,Parker-Lester,fuel,Kolkata
+M000260,Weaver-Cohen,pharmacy,Kolkata
+M000261,Watson-Walker,dining,Mumbai
+M000262,Nguyen-Davis,grocery,Pune
+M000263,Ferguson LLC,dining,Delhi
+M000264,Burns Inc,jewellery,Pune
+M000265,Roberts Ltd,fuel,Mumbai
+M000266,Robinson-Martin,travel,Delhi
+M000267,"Brown, Figueroa and Foster",grocery,Hyderabad
+M000268,"Lopez, Davis and Melton",pharmacy,Pune
+M000269,"Maxwell, Young and Maxwell",travel,Delhi
+M000270,Schultz Group,travel,Hyderabad
+M000271,Moore-Barton,shopping,Hyderabad
+M000272,"Day, Dennis and Williamson",travel,Pune
+M000273,"Morris, Leonard and Spencer",jewellery,Pune
+M000274,White Ltd,grocery,Pune
+M000275,Jackson-Skinner,travel,Kolkata
+M000276,Marquez LLC,pharmacy,Mumbai
+M000277,Sullivan PLC,grocery,Chennai
+M000278,Burns-Mendez,fuel,Delhi
+M000279,Jones-Rogers,utilities,Hyderabad
+M000280,Rice Ltd,utilities,Mumbai
+M000281,Cox PLC,grocery,Bangalore
+M000282,Green Group,utilities,Chennai
+M000283,Adams-Hall,fuel,Pune
+M000284,Fowler-Kelly,dining,Mumbai
+M000285,Evans PLC,fuel,Pune
+M000286,"Paul, Oconnor and Rodriguez",fuel,Pune
+M000287,Wilson-Carpenter,jewellery,Delhi
+M000288,"Shaffer, Duncan and Gonzalez",pharmacy,Mumbai
+M000289,Boone-Morrison,travel,Pune
+M000290,Cook Group,shopping,Kolkata
+M000291,"Ferguson, Walker and Martinez",jewellery,Kolkata
+M000292,Fisher Inc,fuel,Bangalore
+M000293,"Harris, Petersen and Boyd",pharmacy,Mumbai
+M000294,"Baird, Simmons and Johnson",grocery,Chennai
+M000295,Hunter-Preston,jewellery,Kolkata
+M000296,"Jones, Bauer and Castillo",dining,Chennai
+M000297,Gonzalez-Mitchell,grocery,Bangalore
+M000298,"Graham, Stewart and Brown",dining,Kolkata
+M000299,Martinez Ltd,shopping,Ahmedabad
+M000300,Ortiz-Decker,utilities,Ahmedabad
