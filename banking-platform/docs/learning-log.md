@@ -29,7 +29,7 @@ Reproducibility
 Day	Your work
 Monday	Master data design + master-data.md
 
-Tuesday	Customers + branches + merchants ---------- done
+Tuesday	Customers + branches + merchants ---------- till now done
 
 Wednesday	Accounts + relationships + YAML
 
