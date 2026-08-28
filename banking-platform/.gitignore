@@ -1,0 +1,22 @@
+# Generated banking data
+data/atm/
+data/mobile/
+
+# Python
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Secrets
+*.pem
+
+# Local data
+data/*.csv
+
+# IDE
+.vscode/
