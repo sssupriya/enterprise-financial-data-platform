@@ -14,10 +14,11 @@ Add .gitignore (Python template) and commit: 'chore: initial repo structure'.
 docker run --name fincore_db -e POSTGRES_PASSWORD=fincore -p 5450:5432 -d postgres:16
 Connect with DBeaver, create database fincore_dev.
 
-py --version
-py -m pip --version
-py -m pip install faker pandas sqlalchemy psycopg2-binary
-
+- py --version
+- py -m pip --version
+- py -m pip install faker pandas sqlalchemy psycopg2-binary
+- py -m pip install pytest
+- py -m pytest --version
 
 # My first ETL pipeline:
 customers.csv
@@ -109,3 +110,149 @@ branch_code links accounts to branches
 
 ## Verify all 4 CSVs
 - py -c "import pandas as pd; print('Customers:', len(pd.read_csv('data/customers.csv'))); print('Accounts:', len(pd.read_csv('data/accounts.csv'))); print('Branches:', len(pd.read_csv('data/branches.csv'))); print('Merchants:', len(pd.read_csv('data/merchants.csv')))"
+
+
+
+# 28-08-2026
+
+### 🎯 Our implementation plan
+
+#### We'll do Mobile in small pieces, just like Master Data:
+
+* Part 1 — Configuration
+
+- generator_config.yaml
+
+⬇️
+
+* Part 2 — Command-line arguments
+- py -m generators.mobile --date 2026-07-01 --count 20000
+
+⬇️
+
+* Part 3 — Load master CSVs
+- customers
+- accounts
+- merchants
+
+⬇️
+
+* Part 4 — Generate timestamps
+
+- Evening/weekend patterns.
+
+⬇️
+
+* Part 5 — Generate transaction types
+
+- Salary / EMI / Utility / Normal.
+
+⬇️
+
+* Part 6 — Generate amounts
+
+- 70% small transactions.
+
+⬇️
+
+* Part 7 — Generate IDs and status
+
+⬇️
+
+* Part 8 — Save CSV
+data/mobile/2026-07-01.csv
+
+⬇️
+
+* Part 9 — Test
+- pytest -v
+
+
+## 🚀 Mobile Banking Generator
+- generators/mobile.py
+     - transaction_id
+     - customer_id
+     - account_number
+     - amount
+     - merchant
+     - device_id
+     - gps_city
+     - timestamp
+     - status
+     
+## Final output Look like:
+Mobile Generator
+│
+├── Command line arguments       ✅
+├── Load customers               ✅
+├── Load accounts                ✅
+├── Load merchants               ✅
+├── Requested date               ✅
+├── Requested count              ✅
+├── Evening activity             ✅
+└── Weekend activity             ✅
+
+
+## Transaction type/business pattern.
+
+### We need to handle:
+
+- 1st of month → salary credits
+- 5th → EMI debits
+- 15th–20th → utility bills
+- Other dates → normal transactions
+
+## Amount generation 
+### 70% of transactions should be small amounts: ₹100–₹2,000.
+
+## What we've completed in mobile.py
+Command-line arguments          ✅
+Load customers/accounts         ✅
+Load merchants                  ✅
+Date-specific generation        ✅
+Evening timestamps              ✅
+Weekend behavior                ✅
+Salary pattern                  ✅
+EMI pattern                     ✅
+Utility pattern                 ✅
+Amount generation               ✅
+YAML configuration              ✅
+Status generation               ✅
+Device ID generation            ✅
+Utility → utility merchant      ✅
+CSV output                      ✅
+
+##### I weighted the hourly distribution so that transaction activity peaks around 6 PM–9 PM, which creates a realistic evening-heavy mobile banking pattern.
+
+## ATM generator
+✅ ATM generator is working.
+
+- Sample satisfies the main requirements:
+
+- atm_id → ✅ generated
+- withdrawal_amount → ✅ multiples of ₹100
+- balance_after → ✅ calculated
+- city → ✅ from configured cities
+- pin_attempts → ✅ includes 3 occasionally
+- atm_health → ✅ HEALTHY / DEGRADED
+- CSV → ✅ generated
+
+## 🎉 6/6 pytest tests passed. This is a major milestone for your assignment.
+### output means:
+
+- Mobile amount positive          ✅
+- Transaction IDs unique          ✅
+- Timestamps correct              ✅
+- Required columns present        ✅
+- ATM amounts multiple of ₹100    ✅
+- PIN attempts valid              ✅
+
+## Createated generate_day.py for One command generates a full day of Mobile + ATM data.
+
+
+<!-- 
+⚠️ One important thing
+
+The ATM data itself currently doesn't use the date. That's okay for the moment because the assignment mainly requires the ATM generator and date-runnable pipeline. We can add an ATM timestamp later if we decide it's useful. -->
+
+#### "I created a parameterized full-day generator. I can generate Mobile and ATM banking data for any business date with one command."

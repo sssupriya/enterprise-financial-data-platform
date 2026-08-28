@@ -119,3 +119,11 @@ There will be 300 merchants.
                        | used by
                        |
                     TRANSACTION
+
+Key relationships
+- A customer can have multiple accounts.
+- Each account belongs to one customer.
+- Each account is associated with one branch.
+- A branch can have many accounts.
+- Merchants are independent master data entities.
+- Mobile transactions reference customers, accounts and merchants.

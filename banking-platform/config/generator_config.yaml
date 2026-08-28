@@ -52,3 +52,68 @@ master_data:
     - pharmacy
     - travel
     - shopping
+
+mobile:
+  small_amount_probability: 0.70
+
+  normal_amount:
+    small:
+      min: 100
+      max: 2000
+    large:
+      min: 2001
+      max: 50000
+
+  salary:
+    day: 1
+    probability: 0.20
+    amount:
+      min: 25000
+      max: 150000
+
+  emi:
+    day: 5
+    probability: 0.15
+    amount:
+      min: 5000
+      max: 50000
+
+  utility:
+    start_day: 15
+    end_day: 20
+    probability: 0.20
+    amount:
+      min: 500
+      max: 10000
+
+  status:
+    success_probability: 0.95
+    failed_probability: 0.04
+    pending_probability: 0.01
+
+  device_id:
+    min: 100000
+    max: 999999
+
+atm:
+  withdrawal:
+    min: 100
+    max: 20000
+    multiple: 100
+
+  pin_attempts:
+    normal_probability: 0.97
+    failure_probability: 0.03
+
+  balance:
+    min: 1000
+    max: 200000
+
+  health:
+    healthy_probability: 0.95
+    degraded_probability: 0.04
+    down_probability: 0.01
+
+  atm_id:
+    start: 1000
+    end: 9999
