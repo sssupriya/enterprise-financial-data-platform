@@ -2,8 +2,25 @@ seed: 42
 
 master_data:
   customers: 5000
+  accounts: 7000
   branches: 50
   merchants: 300
+
+  customer_creation:
+    earliest_date: "2020-01-01"
+    latest_date: "2026-07-01"
+
+  account_types:
+    - savings
+    - current
+
+  balance:
+    min: 1000
+    max: 500000
+
+  account_opening:
+    earliest_date: "2020-01-01"
+    latest_date: "2026-07-01"
 
   cities:
     - Bangalore

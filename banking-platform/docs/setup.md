@@ -52,6 +52,7 @@ py -m pip install faker pandas pyyaml pytest sqlalchemy psycopg2-binary
 py  generators/master_data.py   
 py -c "from faker import Faker; print('Faker is working')"
 py -c "import pandas as pd; print(pd.read_csv('data/customers.csv').shape); print(pd.read_csv('data/branches.csv').shape); print(pd.read_csv('data/merchants.csv').shape)"
+py -c "import pandas as pd; df=pd.read_csv('data/accounts.csv'); print(df.shape); print(df.head())"
 
 banking-platform/
 │
@@ -95,3 +96,16 @@ banking-platform/
 customer_id links accounts to customers
        ↓
 branch_code links accounts to branches
+
+# Very important validation:
+## Make sure every account belongs to a real customer
+- py -c "import pandas as pd; a=pd.read_csv('data/accounts.csv'); c=pd.read_csv('data/customers.csv'); print(a['customer_id'].isin(c['customer_id']).all())"
+
+## check branches
+- py -c "import pandas as pd; a=pd.read_csv('data/accounts.csv'); b=pd.read_csv('data/branches.csv'); print(a['branch_code'].isin(b['branch_code']).all())"
+
+## check duplicate account numbers
+- py -c "import pandas as pd; a=pd.read_csv('data/accounts.csv'); print(a['account_number'].is_unique)"
+
+## Verify all 4 CSVs
+- py -c "import pandas as pd; print('Customers:', len(pd.read_csv('data/customers.csv'))); print('Accounts:', len(pd.read_csv('data/accounts.csv'))); print('Branches:', len(pd.read_csv('data/branches.csv'))); print('Merchants:', len(pd.read_csv('data/merchants.csv')))"

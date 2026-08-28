@@ -34,13 +34,40 @@ fake = Faker()
 master_config = config["master_data"]
 
 CUSTOMER_COUNT = master_config["customers"]
+ACCOUNT_COUNT = master_config["accounts"]
 BRANCH_COUNT = master_config["branches"]
 MERCHANT_COUNT = master_config["merchants"]
+
 
 CITIES = master_config["cities"]
 CUSTOMER_SEGMENTS = master_config["customer_segments"]
 KYC_STATUS = master_config["kyc_status"]
 MERCHANT_CATEGORIES = master_config["merchant_categories"]
+
+ACCOUNT_TYPES = master_config["account_types"]
+
+BALANCE_MIN = master_config["balance"]["min"]
+BALANCE_MAX = master_config["balance"]["max"]
+
+CUSTOMER_CREATION_START = datetime.strptime(
+    master_config["customer_creation"]["earliest_date"],
+    "%Y-%m-%d"
+).date()
+
+CUSTOMER_CREATION_END = datetime.strptime(
+    master_config["customer_creation"]["latest_date"],
+    "%Y-%m-%d"
+).date()
+
+ACCOUNT_OPENING_START = datetime.strptime(
+    master_config["account_opening"]["earliest_date"],
+    "%Y-%m-%d"
+).date()
+
+ACCOUNT_OPENING_END = datetime.strptime(
+    master_config["account_opening"]["latest_date"],
+    "%Y-%m-%d"
+).date()
 
 
 
@@ -49,8 +76,8 @@ def random_date(start_date, end_date):
     days = (end_date - start_date).days
     return start_date + timedelta(days=random.randint(0, days))
 
-
-def generate_customers(count=5000):
+### CUSTOMERS GENERATION FUNCTION
+def generate_customers(count):
 
     customers = []
 
@@ -66,9 +93,9 @@ def generate_customers(count=5000):
             "city": random.choice(CITIES),
             "kyc_status": random.choice(KYC_STATUS),
             "created_date": random_date(
-                datetime(2020, 1, 1),
-                datetime(2026, 7, 1)
-            ).date(),
+                CUSTOMER_CREATION_START,
+                CUSTOMER_CREATION_END
+            ),
             "segment": random.choice(CUSTOMER_SEGMENTS)
         })
 
@@ -81,8 +108,8 @@ def generate_customers(count=5000):
 
     print(f"Created {len(df)} customers")
 
-
-def generate_branches(count=50):
+### BRANCHES GENERATION FUNCTION
+def generate_branches(count):
 
     branches = []
 
@@ -106,8 +133,8 @@ def generate_branches(count=50):
 
     print(f"Created {len(df)} branches")
 
-
-def generate_merchants(count=300):
+### MERCHANTS GENERATION FUNCTION
+def generate_merchants(count):
 
     merchants = []
 
@@ -131,11 +158,76 @@ def generate_merchants(count=300):
 
     print(f"Created {len(df)} merchants")
 
+### ACCOUNTS GENERATION FUNCTION
+def generate_accounts(count, customers_file, branches_file):
+
+    customers = pd.read_csv(customers_file)
+    branches = pd.read_csv(branches_file)
+
+    accounts = []
+
+    for i in range(1, count + 1):
+
+        customer = customers.sample(
+            n=1,
+            random_state=SEED + i
+        ).iloc[0]
+
+        branch = branches.sample(
+            n=1,
+            random_state=SEED + i
+        ).iloc[0]
+
+        account_type = random.choice(ACCOUNT_TYPES)
+
+        balance = round(
+            random.uniform(BALANCE_MIN, BALANCE_MAX),
+            2
+        )
+        customer_created_date = pd.to_datetime(
+            customer["created_date"]
+        ).date()
+
+        earliest_opening_date = max(
+            customer_created_date,
+            ACCOUNT_OPENING_START
+        )
+
+        opened_date = random_date(
+            earliest_opening_date,
+            ACCOUNT_OPENING_END
+        )
+
+        accounts.append({
+            "account_number": f"{1000000000 + i}",
+            "customer_id": customer["customer_id"],
+            "account_type": account_type,
+            "ifsc": branch["ifsc"],
+            "branch_code": branch["branch_code"],
+            "opened_date": opened_date,
+            "balance": balance
+        })
+
+    df = pd.DataFrame(accounts)
+
+    df.to_csv(
+        DATA_DIR / "accounts.csv",
+        index=False
+    )
+
+    print(f"Created {len(df)} accounts")
+
+
 
 if __name__ == "__main__":
 
     generate_customers(CUSTOMER_COUNT)
     generate_branches(BRANCH_COUNT)
     generate_merchants(MERCHANT_COUNT)
+    generate_accounts(
+        ACCOUNT_COUNT,
+        DATA_DIR / "customers.csv",
+        DATA_DIR / "branches.csv"
+    )
 
     print("Master data generation completed.")

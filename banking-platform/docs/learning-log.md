@@ -22,11 +22,19 @@ Fraud-model development
 Data quality
 Reproducibility
 
+## Business Rules
+- account_number must be unique
+- customer_id must exist in Customer
+- branch_code must exist in Branch
+- balance cannot be negative
+- account_type must be savings or current
+- opened_date cannot be before customer.created_date
+
 
 
 ## 🗓️ Practical schedule
 
-Day	Your work
+### Day	Your work
 Monday	Master data design + master-data.md
 
 Tuesday	Customers + branches + merchants ---------- till now done
