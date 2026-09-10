@@ -2,10 +2,13 @@ import argparse
 import random
 import pandas as pd
 import yaml
+import time
 
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
+from shared.landing import get_landing_path
+from shared.logger import get_logger
 
 # Project paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -20,6 +23,8 @@ MOBILE_DATA_DIR.mkdir(exist_ok=True)
 # Load configuration
 with open(CONFIG_FILE, "r") as file:
     config = yaml.safe_load(file)
+
+logger = get_logger("mobile")
 
 
 # Seed
@@ -363,50 +368,68 @@ def generate_transactions(
 if __name__ == "__main__":
     args = parse_args()
 
-    ## Load master data
-    customers, accounts, merchants = load_master_data()
+    start_time = time.perf_counter()
 
-    ## Parse transaction date
-    transaction_date = datetime.strptime(
-        args.date,
-        "%Y-%m-%d"
-    ).date()
-
-    print("Date:", args.date)
-    print("Count:", args.count)
-    print("Customers loaded:", len(customers))
-    print("Accounts loaded:", len(accounts))
-    print("Merchants loaded:", len(merchants))
-
-    df = generate_transactions(
-        args.count,
-        transaction_date,
-        customers,
-        accounts,
-        merchants
+    logger.info(
+        "Generation started",
+        extra={
+            "channel": "mobile"
+        }
     )
 
-    output_file = MOBILE_DATA_DIR / f"{transaction_date}.csv"
+    try:
+        customers, accounts, merchants = load_master_data()
 
-    df.to_csv(
-        output_file,
-        index=False
-    )
+        transaction_date = datetime.strptime(
+            args.date,
+            "%Y-%m-%d"
+        ).date()
 
-    print(f"Created {len(df)} mobile transactions")
-    print(f"Saved to: {output_file}")
+        df = generate_transactions(
+            args.count,
+            transaction_date,
+            customers,
+            accounts,
+            merchants
+        )
 
-    print(df.head(10))
+        output_file = get_landing_path(
+            "mobile",
+            transaction_date
+        )
 
-    # for _ in range(10):
-    #     transaction_type = determine_transaction_type(
-    #         transaction_date
-    #     )
+        df.to_csv(
+            output_file,
+            index=False
+        )
 
-    #     timestamp = generate_timestamp(
-    #         transaction_date
-    #     )
+        duration = round(
+            time.perf_counter() - start_time,
+            3
+        )
 
-    #     amount = generate_amount(transaction_type)
+        logger.info(
+            "Generation completed",
+            extra={
+                "channel": "mobile",
+                "rows": len(df),
+                "output_path": str(output_file),
+                "duration_seconds": duration,
+            }
+        )
 
-    #     print(timestamp, transaction_type, amount)
+    except Exception:
+        duration = round(
+            time.perf_counter() - start_time,
+            3
+        )
+
+        logger.exception(
+            "Generation failed",
+            extra={
+                "channel": "mobile",
+                "duration_seconds": duration,
+            }
+        )
+
+        raise

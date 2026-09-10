@@ -1,6 +1,8 @@
 # Generated banking data
 data/atm/
 data/mobile/
+data/landing/
+logs/
 
 # Python
 __pycache__/

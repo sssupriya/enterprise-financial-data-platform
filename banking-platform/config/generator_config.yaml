@@ -117,3 +117,106 @@ atm:
   atm_id:
     start: 1000
     end: 9999
+
+    banking-platform\data\accounts.csv:
+
+
+
+upi:
+  small_amount_probability: 0.85
+
+  small_amount:
+    min: 10
+    max: 2000
+
+  large_amount:
+    min: 2001
+    max: 50000
+
+  counterparty_banks:
+    - HDFC
+    - ICICI
+    - SBI
+    - AXIS
+    - KOTAK
+    - IDFC
+    - YES
+
+
+
+credit_card:
+  amount:
+    min: 100
+    max: 100000
+
+  card_types:
+    - VISA
+    - MASTERCARD
+    - RUPAY
+
+  credit_limits:
+    - 50000
+    - 100000
+    - 200000
+    - 500000
+
+  reward_points_per_rupee: 0.01
+
+  transaction_hours:
+    start: 6
+    end: 23
+
+  status_weights:
+    - 0.95
+    - 0.04
+    - 0.01
+
+
+internet_banking:
+  amount:
+    normal_min: 500
+    normal_max: 50000
+    large_min: 50000
+    large_max: 500000
+
+  new_beneficiary_probability: 0.08
+
+  browsers:
+    - Chrome
+    - Edge
+    - Firefox
+    - Safari
+
+  operating_systems:
+    - Windows
+    - macOS
+    - Linux
+    - Android
+    - iOS
+
+  transaction_hours:
+    start: 6
+    end: 23
+
+  status_weights:
+    - 0.96
+    - 0.03
+    - 0.01
+
+
+branch:
+  business_hours:
+    start: 9
+    end: 17
+
+  cash_deposit:
+    min: 500
+    max: 200000
+
+  status_weights:
+    - 0.98
+    - 0.02
+
+  teller_id:
+    min: 100
+    max: 999

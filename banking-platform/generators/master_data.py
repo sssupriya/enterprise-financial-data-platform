@@ -1,12 +1,15 @@
-# print("MASTER DATA SCRIPT1 STARTED")
-# print("MASTER DATA SCRIPT2 STARTED")
 
 from faker import Faker
 import pandas as pd
 import random
 import yaml
+
+
 from datetime import datetime, timedelta
 from pathlib import Path
+from shared.logger import get_logger
+
+logger = get_logger("master_data")
 
 
 # Project paths
@@ -106,7 +109,13 @@ def generate_customers(count):
         index=False
     )
 
-    print(f"Created {len(df)} customers")
+    logger.info(
+    "Customers created",
+    extra={
+        "channel": "master_data",
+        "rows": len(df)
+    }
+)
 
 ### BRANCHES GENERATION FUNCTION
 def generate_branches(count):
@@ -131,7 +140,13 @@ def generate_branches(count):
         index=False
     )
 
-    print(f"Created {len(df)} branches")
+    logger.info(
+        "Branches created",
+        extra={
+            "channel": "master_data",
+            "rows": len(df)
+        }
+)
 
 ### MERCHANTS GENERATION FUNCTION
 def generate_merchants(count):
@@ -156,7 +171,13 @@ def generate_merchants(count):
         index=False
     )
 
-    print(f"Created {len(df)} merchants")
+    logger.info(
+        "Merchants created",
+        extra={
+            "channel": "master_data",
+            "rows": len(df)
+        }
+)
 
 ### ACCOUNTS GENERATION FUNCTION
 def generate_accounts(count, customers_file, branches_file):
@@ -215,7 +236,13 @@ def generate_accounts(count, customers_file, branches_file):
         index=False
     )
 
-    print(f"Created {len(df)} accounts")
+    logger.info(
+        "Accounts created",
+        extra={
+            "channel": "master_data",
+            "rows": len(df)
+        }
+)
 
 
 
@@ -230,4 +257,10 @@ if __name__ == "__main__":
         DATA_DIR / "branches.csv"
     )
 
-    print("Master data generation completed.")
+    
+    logger.info(
+        "Master data generation completed",
+        extra={
+            "channel": "master_data"
+        }
+)

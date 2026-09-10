@@ -2,8 +2,12 @@ import argparse
 import pandas as pd
 import random
 import yaml
+import time
 
 from pathlib import Path
+
+from shared.landing import get_landing_path
+from shared.logger import get_logger
 
 # Project paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -15,6 +19,8 @@ DATA_DIR.mkdir(exist_ok=True)
 # Load configuration
 with open(CONFIG_FILE, "r") as file:
     config = yaml.safe_load(file)
+
+logger = get_logger("atm")
 
 # Seed randomness
 SEED = config["seed"]
@@ -137,26 +143,59 @@ def parse_args():
 
 ##  Main execution
 if __name__ == "__main__":
-
     args = parse_args()
 
-    print("Date:", args.date)
-    print("Count:", args.count)
+    start_time = time.perf_counter()
 
-    df = generate_atm_transactions(args.count)
-
-    output_dir = DATA_DIR / "atm"
-    output_dir.mkdir(exist_ok=True)
-
-    output_file = output_dir / f"{args.date}.csv"
-
-    df.to_csv(
-        output_file,
-        index=False
+    logger.info(
+        "Generation started",
+        extra={
+            "channel": "atm"
+        }
     )
 
-    print(f"Created {len(df)} ATM transactions")
-    print(f"Saved to: {output_file}")
+    try:
+        df = generate_atm_transactions(
+            args.count,
+        )
 
-    print("\nSample:")
-    print(df.head(10))
+        output_file = get_landing_path(
+            "atm",
+            args.date
+        )
+
+        df.to_csv(
+            output_file,
+            index=False
+        )
+
+        duration = round(
+            time.perf_counter() - start_time,
+            3
+        )
+
+        logger.info(
+            "Generation completed",
+            extra={
+                "channel": "atm",
+                "rows": len(df),
+                "output_path": str(output_file),
+                "duration_seconds": duration,
+            }
+        )
+
+    except Exception:
+        duration = round(
+            time.perf_counter() - start_time,
+            3
+        )
+
+        logger.exception(
+            "Generation failed",
+            extra={
+                "channel": "atm",
+                "duration_seconds": duration,
+            }
+        )
+
+        raise

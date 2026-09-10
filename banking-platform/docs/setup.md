@@ -274,3 +274,45 @@ Full-day Generator           ✅
 Pytest                       ✅ 6/6 passed
 Master Data Design           ✅
 GitHub                       ✅
+
+## usefull commands
+- py -m generators.mobile --date 2026-07-05 --count 20
+- py -m generators.atm --date 2026-07-01 --count 10
+
+
+
+
+
+### 09-01-2026
+✅ shared/landing.py created
+✅ channel folder created
+✅ yyyy/mm/dd folders created
+✅ filename convention correct
+
+- py -c "from shared.landing import get_landing_path; print(get_landing_path('upi', '2026-07-01'))"
+
+
+### 08-09-2026
+All six generators are now logging in the same structured format:
+
+UPI               ✅
+Credit Card       ✅
+Internet Banking  ✅
+Branch            ✅
+Mobile            ✅
+ATM               ✅
+
+
+### 10-09-2026
+The next major task is the single orchestrator:
+
+run_generation.py
+
+Its job will be to run all six channels:
+
+mobile
+atm
+upi
+credit_card
+internet_banking
+branch
