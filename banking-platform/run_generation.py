@@ -2,6 +2,8 @@ import argparse
 import subprocess
 import sys
 import time
+from pathlib import Path
+import yaml
 
 from tenacity import (
     retry,
@@ -24,14 +26,15 @@ CHANNELS = [
     "branch",
 ]
 
-GENERATOR_COUNTS = {
-    "mobile": 20000,
-    "atm": 100,
-    "upi": 50000,
-    "credit_card": 10000,
-    "internet_banking": 5000,
-    "branch": 500,
-}
+PROJECT_ROOT = Path(__file__).resolve().parent
+CONFIG_PATH = PROJECT_ROOT / "config" / "generator_config.yaml"
+
+
+with open(CONFIG_PATH, "r", encoding="utf-8") as config_file:
+    config = yaml.safe_load(config_file)
+
+
+GENERATOR_COUNTS = config["generation_counts"]
 
 results = []
 

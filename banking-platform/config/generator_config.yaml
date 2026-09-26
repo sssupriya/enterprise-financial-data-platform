@@ -118,10 +118,6 @@ atm:
     start: 1000
     end: 9999
 
-    banking-platform\data\accounts.csv:
-
-
-
 upi:
   small_amount_probability: 0.85
 
@@ -220,3 +216,11 @@ branch:
   teller_id:
     min: 100
     max: 999
+
+generation_counts:
+  mobile: 20000
+  atm: 100
+  upi: 50000
+  credit_card: 10000
+  internet_banking: 5000
+  branch: 500

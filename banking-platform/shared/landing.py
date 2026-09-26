@@ -11,7 +11,7 @@ def get_landing_path(channel, business_date):
     Return a landing-zone file path for a channel and business date.
 
     Example:
-    data/landing/upi/2026/07/01/upi_20260701_153045.csv
+    data/landing/upi/2026/07/01/upi_20260701_153045_123456.csv
     """
 
     if isinstance(business_date, str):
@@ -40,7 +40,7 @@ def get_landing_path(channel, business_date):
         exist_ok=True
     )
 
-    run_timestamp = datetime.now().strftime("%H%M%S")
+    run_timestamp = datetime.now().strftime("%H%M%S_%f")
 
     filename = (
         f"{channel}_"

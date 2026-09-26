@@ -322,3 +322,6 @@ branch
 #### “I used Tenacity to add controlled retry behavior around each source generator. If a generator fails because of a temporary problem, the orchestrator retries it up to three times. If all attempts fail, we log the failure and return a non-zero exit status.”
 
 py -m pip install tenacity
+
+# 22-09-2026
+### 6 generators → immutable landing → structured logging → retry orchestration → daily runner → 30-day historical backfill.
