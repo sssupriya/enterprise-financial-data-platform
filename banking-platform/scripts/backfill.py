@@ -18,7 +18,7 @@ logger = get_logger("backfill")
 
 START_DATE = date(2026, 7, 1)
 
-# Keep 2 while testing logging.
+# Number of historical business days to generate
 NUMBER_OF_DAYS = 30
 
 

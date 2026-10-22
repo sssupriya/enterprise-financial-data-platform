@@ -1,0 +1,29 @@
+x-custom-airflow: &custom-airflow
+  image: banking-airflow:3.1.0
+  build:
+    context: .
+    dockerfile: Dockerfile
+
+services:
+  airflow-apiserver:
+    <<: *custom-airflow
+    volumes:
+      - ../:/opt/banking-platform
+
+  airflow-scheduler:
+    <<: *custom-airflow
+    volumes:
+      - ../:/opt/banking-platform
+
+  airflow-dag-processor:
+    <<: *custom-airflow
+    volumes:
+      - ../:/opt/banking-platform
+
+  airflow-worker:
+    <<: *custom-airflow
+    volumes:
+      - ../:/opt/banking-platform
+
+  airflow-triggerer:
+    <<: *custom-airflow

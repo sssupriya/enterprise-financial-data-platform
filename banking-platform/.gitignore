@@ -22,3 +22,15 @@ data/*.csv
 
 # IDE
 .vscode/
+
+
+# Apache Airflow
+airflow/logs/
+airflow/config/
+airflow/plugins/
+airflow/.env
+airflow/airflow.db
+airflow/standalone_admin_password.txt
+
+# Docker local overrides
+*.pid

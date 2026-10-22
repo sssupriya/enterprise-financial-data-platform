@@ -218,9 +218,9 @@ branch:
     max: 999
 
 generation_counts:
-  mobile: 20000
-  atm: 100
-  upi: 50000
+  mobile: 250000
+  atm: 500
+  upi: 55000
   credit_card: 10000
   internet_banking: 5000
   branch: 500
